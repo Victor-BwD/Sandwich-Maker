@@ -16,6 +16,8 @@ public class SandwitchDisplay : MonoBehaviour
 
     private Sandwich randomSandwich;
 
+    public Sandwich RandonSandwichDisplayed => randomSandwich;
+
     void Start()
     {
         GenerateRandomSandwich();
@@ -30,19 +32,5 @@ public class SandwitchDisplay : MonoBehaviour
         ingredientImage1.sprite = randomSandwich.ingredients[0].ingredientIcon;
         ingredientImage2.sprite = randomSandwich.ingredients[1].ingredientIcon;
         ingredientImage3.sprite = randomSandwich.ingredients[2].ingredientIcon;
-    }
-
-    public void Check(IngredientData ingredient)
-    {
-        if (randomSandwich.ingredients.Contains(ingredient))
-        {
-            Debug.Log("Acertou um ingrediente");
-        }
-        else
-        {
-            Debug.Log("Errou");
-        }
-    }
-
-    
+    }    
 }

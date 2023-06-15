@@ -378,7 +378,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 110610980}
         m_TargetAssemblyTypeName: IngredientButtons, Assembly-CSharp
-        m_MethodName: ButtonPressed
+        m_MethodName: CheckIngredient
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d334ce243f382145a0b2bc6fa34c426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ingredient: {fileID: 11400000, guid: c1eea6fa52e330c429b861246aadf670, type: 2}
+  ingredient: {fileID: 11400000, guid: c1eea6fa52e330c429b861246aadf670, type: 2}
 --- !u!1 &157657068
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +814,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 351540299}
         m_TargetAssemblyTypeName: IngredientButtons, Assembly-CSharp
-        m_MethodName: ButtonPressed
+        m_MethodName: CheckIngredient
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d334ce243f382145a0b2bc6fa34c426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ingredient: {fileID: 11400000, guid: ccf229fc8816bce4f97565335cd855f1, type: 2}
+  ingredient: {fileID: 11400000, guid: ccf229fc8816bce4f97565335cd855f1, type: 2}
 --- !u!1 &355545738
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2414,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1449175793}
         m_TargetAssemblyTypeName: IngredientButtons, Assembly-CSharp
-        m_MethodName: ButtonPressed
+        m_MethodName: CheckIngredient
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2474,7 +2474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d334ce243f382145a0b2bc6fa34c426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ingredient: {fileID: 11400000, guid: e18dddf554e75414ebd56c351eacf33d, type: 2}
+  ingredient: {fileID: 11400000, guid: e18dddf554e75414ebd56c351eacf33d, type: 2}
 --- !u!1 &1475089727
 GameObject:
   m_ObjectHideFlags: 0
@@ -3204,7 +3204,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2061556111}
         m_TargetAssemblyTypeName: IngredientButtons, Assembly-CSharp
-        m_MethodName: ButtonPressed
+        m_MethodName: CheckIngredient
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d334ce243f382145a0b2bc6fa34c426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ingredient: {fileID: 11400000, guid: 513d653763478174192dde4c172b622e, type: 2}
+  ingredient: {fileID: 11400000, guid: 513d653763478174192dde4c172b622e, type: 2}
 --- !u!1 &2115181272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3393,7 +3393,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2143061280}
         m_TargetAssemblyTypeName: IngredientButtons, Assembly-CSharp
-        m_MethodName: ButtonPressed
+        m_MethodName: CheckIngredient
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3453,4 +3453,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d334ce243f382145a0b2bc6fa34c426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ingredient: {fileID: 11400000, guid: c4e6f392453b8214788d424cdde6fd7d, type: 2}
+  ingredient: {fileID: 11400000, guid: c4e6f392453b8214788d424cdde6fd7d, type: 2}

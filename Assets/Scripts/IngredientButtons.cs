@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class IngredientButtons : MonoBehaviour
 {
-    [SerializeField] private IngredientData Ingredient;
+    [SerializeField] private IngredientData ingredient;
 
     private SandwitchDisplay sandwitch;
 
@@ -21,10 +21,15 @@ public class IngredientButtons : MonoBehaviour
         
     }
 
-    public void ButtonPressed()
+    public void CheckIngredient()
     {
-        sandwitch.Check(Ingredient);
+        if (sandwitch.RandonSandwichDisplayed.ingredients.Contains(ingredient))
+        {
+            Debug.Log("Acertou um ingrediente");
+        }
+        else
+        {
+            Debug.Log("Errou");
+        }
     }
-
-    
 }
