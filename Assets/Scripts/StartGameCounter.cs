@@ -5,9 +5,10 @@ using TMPro;
 
 public class StartGameCounter : MonoBehaviour
 {
-    public float countdownTime = 5f;
+    private float countdownTime = 5f;
     private TextMeshProUGUI countdownText;
 
+    public float CountdownTimerToBegin => countdownTime;
 
     // Start is called before the first frame update
     void Start()
