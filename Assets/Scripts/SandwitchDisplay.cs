@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
 public class SandwitchDisplay : MonoBehaviour
 {
-    public Sandwich[] sandwiches; // Array contendo todos os possíveis Scriptable Objects de sanduíches
+    public Sandwich[] sandwiches; 
 
     public TMP_Text Name;
     public SpriteRenderer Artwork;
     public SpriteRenderer ingredientImage1;
     public SpriteRenderer ingredientImage2;
     public SpriteRenderer ingredientImage3;
+
+    private Sandwich randomSandwich;
 
     void Start()
     {
@@ -20,7 +23,7 @@ public class SandwitchDisplay : MonoBehaviour
 
     void GenerateRandomSandwich()
     {
-        Sandwich randomSandwich = sandwiches[Random.Range(0, sandwiches.Length)];
+        randomSandwich = sandwiches[Random.Range(0, sandwiches.Length)];
 
         Artwork.sprite = randomSandwich.Artwork;
         Name.text = randomSandwich.SandwichName;
@@ -28,4 +31,18 @@ public class SandwitchDisplay : MonoBehaviour
         ingredientImage2.sprite = randomSandwich.ingredients[1].ingredientIcon;
         ingredientImage3.sprite = randomSandwich.ingredients[2].ingredientIcon;
     }
+
+    public void Check(IngredientData ingredient)
+    {
+        if (randomSandwich.ingredients.Contains(ingredient))
+        {
+            Debug.Log("Acertou um ingrediente");
+        }
+        else
+        {
+            Debug.Log("Errou");
+        }
+    }
+
+    
 }
