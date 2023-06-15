@@ -18,7 +18,6 @@ public class StartGameCounter : MonoBehaviour
         countdownText = FindObjectOfType<CountBeginMark>().GetComponent<TextMeshProUGUI>();
         buttonsManager = GetComponent<ButtonsManager>();
         StartText = FindObjectOfType<StartTextMark>(true).gameObject;
-        
     }
 
     // Update is called once per frame

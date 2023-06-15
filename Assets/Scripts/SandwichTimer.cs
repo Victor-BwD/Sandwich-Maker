@@ -25,17 +25,26 @@ public class SandwichTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isGameOver && gameCounterToStart.CountdownTimerToBegin <= 0f)
+        if(CanUpdateTimer())
         {
-            currentTime -= Time.deltaTime; 
-            countMakeSandwich.text = currentTime.ToString("F0");
-
-            if (currentTime <= 0f)
-            {
-                currentTime = 0f;
-                EndGame();
-            }
+            UpdateTimer();
         }
+    }
+
+    private void UpdateTimer()
+    {
+        currentTime -= Time.deltaTime;
+        countMakeSandwich.text = currentTime.ToString("F0");
+
+        if (currentTime <= 0f)
+        {
+            EndGame();
+        }
+    }
+
+    private bool CanUpdateTimer()
+    {
+        return !isGameOver && gameCounterToStart.CountdownTimerToBegin <= 0f;
     }
 
     private void EndGame()
