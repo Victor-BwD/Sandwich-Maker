@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,6 +28,17 @@ public class ButtonsManager : MonoBehaviour
         foreach (Button button in gameButtons)
         {
             button.interactable = true;
+        }
+    }
+
+    public async void ResetButtonColors(float delay)
+    {
+        await Task.Delay(TimeSpan.FromSeconds(delay));
+
+        foreach (Button button in gameButtons)
+        {
+            Image buttonImage = button.GetComponent<Image>();
+            buttonImage.color = Color.white;
         }
     }
 }
