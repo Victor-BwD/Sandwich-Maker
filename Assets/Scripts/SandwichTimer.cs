@@ -16,7 +16,7 @@ public class SandwichTimer : MonoBehaviour
     void Start()
     {
         currentTime = totalTime;
-        countMakeSandwich = FindObjectOfType<CountToMakeSandwich>().GetComponent<TMP_Text>();
+        countMakeSandwich = FindObjectOfType<CountToMakeSandwichMark>().GetComponent<TMP_Text>();
         countMakeSandwich.text = totalTime.ToString("F0");
 
         gameCounterToStart = FindObjectOfType<StartGameCounter>();
