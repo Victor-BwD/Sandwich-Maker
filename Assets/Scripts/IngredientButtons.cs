@@ -27,8 +27,6 @@ public class IngredientButtons : MonoBehaviour
             buttonsManager.ResetButtonColors(0.3f);
             correctIngredientCount = 0;
         }
-
-        Debug.Log(correctIngredientCount);
     }
 
     // Used in Unity button inspector
