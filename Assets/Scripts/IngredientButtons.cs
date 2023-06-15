@@ -9,7 +9,6 @@ public class IngredientButtons : MonoBehaviour
 
     private SandwitchDisplay sandwitch;
 
-    // Start is called before the first frame update
     void Start()
     {
         sandwitch = FindObjectOfType<SandwitchDisplay>();
@@ -21,6 +20,7 @@ public class IngredientButtons : MonoBehaviour
         
     }
 
+    // Used in Unity button inspector
     public void CheckIngredient()
     {
         if (sandwitch.RandonSandwichDisplayed.ingredients.Contains(ingredient))
