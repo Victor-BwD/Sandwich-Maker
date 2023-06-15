@@ -7,6 +7,7 @@ public class StartGameCounter : MonoBehaviour
 {
     private float countdownTime = 5f;
     private TextMeshProUGUI countdownText;
+    private ButtonsManager buttonsManager;
 
     public float CountdownTimerToBegin => countdownTime;
 
@@ -14,6 +15,7 @@ public class StartGameCounter : MonoBehaviour
     void Start()
     {
         countdownText = FindObjectOfType<CountBeginMark>().GetComponent<TextMeshProUGUI>();
+        buttonsManager = GetComponent<ButtonsManager>();
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class StartGameCounter : MonoBehaviour
 
         if (countdownTime <= 0f)
         {
+            buttonsManager.EnableButtons();
             Destroy(countdownText);
         }
     }
