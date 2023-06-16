@@ -12,6 +12,7 @@ public class IngredientButtons : MonoBehaviour
     private SandwitchDisplay sandwitch;
     private Image buttonImage;
     private ButtonsManager buttonsManager;
+    private PointsManager pointsManager;
 
     private static int correctIngredientCount = 0;
     
@@ -23,6 +24,7 @@ public class IngredientButtons : MonoBehaviour
         sandwitch = FindObjectOfType<SandwitchDisplay>();
         buttonsManager = FindObjectOfType<ButtonsManager>();
         buttonImage = GetComponentInChildren<Image>();
+        pointsManager = FindObjectOfType<PointsManager>();
     }
 
     private void Update()
@@ -32,6 +34,7 @@ public class IngredientButtons : MonoBehaviour
             buttonsManager.ResetButtonColors(0.3f);
             correctIngredientCount = 0;
             SandwichMananger.SandwichDoneCorrectly();
+            pointsManager.IncreasePoints(50);
 
             OnCorrectIngredientsCountReached?.Invoke();
         }
@@ -53,6 +56,7 @@ public class IngredientButtons : MonoBehaviour
             Debug.Log("Errou");
             buttonImage.color = Color.red;
             SandwichMananger.WrongSandwich();
+            pointsManager.DecreasePoints(25);
         }
     }
 }
