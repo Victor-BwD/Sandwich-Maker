@@ -33,7 +33,7 @@ public class IngredientButtons : MonoBehaviour
         {
             buttonsManager.ResetButtonColors(0.3f);
             correctIngredientCount = 0;
-            SandwichMananger.SandwichDoneCorrectly();
+            SandwichManager.SandwichDoneCorrectly();
             pointsManager.IncreasePoints(50);
 
             OnCorrectIngredientsCountReached?.Invoke();
@@ -55,7 +55,7 @@ public class IngredientButtons : MonoBehaviour
         {
             Debug.Log("Errou");
             buttonImage.color = Color.red;
-            SandwichMananger.WrongSandwich();
+            SandwichManager.WrongSandwich();
             pointsManager.DecreasePoints(25);
         }
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SandwichMananger : MonoBehaviour
+public class SandwichManager : MonoBehaviour
 {
     private static int sandwichDoneNumber = 0;
     private static int errors = 0;

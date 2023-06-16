@@ -33,7 +33,7 @@ public class PointsManager : MonoBehaviour
 
     private int GetExtraPoints()
     {
-        var streak = SandwichMananger.SandwichDoneStreak();
+        var streak = SandwichManager.SandwichDoneStreak();
 
         var extraPoints = 0;
         if (streak >= 3)
