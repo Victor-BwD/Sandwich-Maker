@@ -37,7 +37,9 @@ public class IngredientButtons : MonoBehaviour
     // Used in Unity button inspector
     public void CheckIngredient()
     {
-        if (sandwitch.RandonSandwichDisplayed.ingredients.Contains(ingredient))
+        var sandwichIngredients = sandwitch.RandonSandwichDisplayed.ingredients;
+
+        if (sandwichIngredients.Contains(ingredient))
         {
             Debug.Log("Acertou um ingrediente");
             buttonImage.color = Color.green;
