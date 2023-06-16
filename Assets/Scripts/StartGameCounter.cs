@@ -12,7 +12,6 @@ public class StartGameCounter : MonoBehaviour
 
     public float CountdownTimerToBegin => countdownTime;
 
-    // Start is called before the first frame update
     void Start()
     {
         countdownText = FindObjectOfType<CountBeginMark>().GetComponent<TextMeshProUGUI>();
@@ -20,7 +19,6 @@ public class StartGameCounter : MonoBehaviour
         StartText = FindObjectOfType<StartTextMark>(true).gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
         DecrementTimerToBeginGame();
