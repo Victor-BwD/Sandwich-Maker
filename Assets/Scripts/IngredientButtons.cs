@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,9 @@ public class IngredientButtons : MonoBehaviour
     private SandwitchDisplay sandwitch;
     private Image buttonImage;
     private ButtonsManager buttonsManager;
+
     private static int correctIngredientCount = 0;
+    public static Action OnCorrectIngredientsCountReached;
 
     void Start()
     {
@@ -26,6 +29,8 @@ public class IngredientButtons : MonoBehaviour
         {
             buttonsManager.ResetButtonColors(0.3f);
             correctIngredientCount = 0;
+
+            OnCorrectIngredientsCountReached?.Invoke();
         }
     }
 

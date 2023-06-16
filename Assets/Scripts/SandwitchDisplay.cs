@@ -23,6 +23,16 @@ public class SandwitchDisplay : MonoBehaviour
         GenerateRandomSandwich();
     }
 
+    private void OnEnable()
+    {
+        IngredientButtons.OnCorrectIngredientsCountReached += GenerateRandomSandwich;
+    }
+
+    private void OnDisable()
+    {
+        IngredientButtons.OnCorrectIngredientsCountReached -= GenerateRandomSandwich;
+    }
+
     void GenerateRandomSandwich()
     {
         randomSandwich = sandwiches[Random.Range(0, sandwiches.Length)];
