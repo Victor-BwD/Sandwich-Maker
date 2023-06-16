@@ -47,13 +47,11 @@ public class IngredientButtons : MonoBehaviour
 
         if (sandwichIngredients.Contains(ingredient))
         {
-            Debug.Log("Acertou um ingrediente");
             buttonImage.color = Color.green;
             correctIngredientCount++;
         }
         else
         {
-            Debug.Log("Errou");
             buttonImage.color = Color.red;
             SandwichManager.WrongSandwich();
             pointsManager.DecreasePoints(25);
