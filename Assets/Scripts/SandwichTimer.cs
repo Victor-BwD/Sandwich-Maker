@@ -13,7 +13,6 @@ public class SandwichTimer : MonoBehaviour
 
     private StartGameCounter gameCounterToStart;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentTime = totalTime;
@@ -23,7 +22,6 @@ public class SandwichTimer : MonoBehaviour
         gameCounterToStart = FindObjectOfType<StartGameCounter>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(CanUpdateTimer())
