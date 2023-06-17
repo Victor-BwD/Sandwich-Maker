@@ -41,7 +41,7 @@ public class StartGameCounter : MonoBehaviour
 
     private void ShowStartText()
     {
-        if (StartText == null) return;
+        if (StartText == null) return; // Avoid null error
 
         StartText.SetActive(true);
         Destroy(StartText.gameObject, 4f);

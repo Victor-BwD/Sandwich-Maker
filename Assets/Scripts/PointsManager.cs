@@ -15,7 +15,7 @@ public class PointsManager : MonoBehaviour
         pointsText.text = points.ToString();
     }
 
-    public void IncreasePoints(int points)
+    public void IncreasePoints(int points) // Increase points when hit
     {
         this.points += points;
         pointsText.text = this.points.ToString();
@@ -25,7 +25,7 @@ public class PointsManager : MonoBehaviour
         pointsText.text = this.points.ToString();
     }
 
-    public void DecreasePoints(int points)
+    public void DecreasePoints(int points) // Decrease points when wrong
     {
         if (this.points <= 0) return;
 
@@ -33,7 +33,7 @@ public class PointsManager : MonoBehaviour
         pointsText.text = this.points.ToString();
     }
 
-    private int GetExtraPoints()
+    private int GetExtraPoints() // Function to return a value for extra point when in streak
     {
         var streak = SandwichManager.SandwichDoneStreak();
 
