@@ -8,6 +8,8 @@ public class PointsManager : MonoBehaviour
     [SerializeField] private TMP_Text pointsText;
     private int points;
 
+    public int Points => points;
+
     private void Start()
     {
         pointsText.text = points.ToString();

@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class SandwichTimer : MonoBehaviour
 {
-    private float totalTime = 120f;
+    [SerializeField] private GameObject gameOverScreen;
+    private float totalTime = 10f;
     private float currentTime = 0f;
     private TMP_Text countMakeSandwich;
     private bool isGameOver = false;
@@ -50,5 +51,10 @@ public class SandwichTimer : MonoBehaviour
     private void EndGame()
     {
         isGameOver = true;
+
+        if (isGameOver)
+        {
+            gameOverScreen.SetActive(true);
+        }
     }
 }

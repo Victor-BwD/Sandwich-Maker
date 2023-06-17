@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class SandwichManager : MonoBehaviour
 {
-    private static int sandwichDoneNumber = 0;
+    private static int sandwichsMadeNumber = 0;
     private static int errors = 0;
     private static int streak = 0;
 
+    public static int SandwichsMadeNumber => sandwichsMadeNumber;
+
     public static void SandwichDoneCorrectly()
     {
-        sandwichDoneNumber++;
+        sandwichsMadeNumber++;
         streak++;
     }
 
